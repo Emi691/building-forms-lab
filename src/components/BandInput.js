@@ -2,17 +2,13 @@
 import React, { Component } from 'react'
 
 class BandInput extends Component {
-  constructor(){
-    super()
-    this.state = {
-    text: '',
+  state = {
+    name: '',
     }
-  }
-  
 
   handleChange = event => {
     this.setState({
-      text: event.target.value
+    name: event.target.value
     })
   }
 
@@ -20,7 +16,7 @@ class BandInput extends Component {
     event.preventDefault()
     this.props.addBand(this.state)
     this.setState({
-      text: '',
+      name: '',
     })
   }
 
